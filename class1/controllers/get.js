@@ -1,6 +1,7 @@
 "use strict";
 function default_1(req, res, next) {
-    res.json({ message: 'Hello World' });
+    const response = { status: 1, message: 'Hello' };
+    res.json(response);
     next();
 }
 Object.defineProperty(exports, "__esModule", { value: true });
