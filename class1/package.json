@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "push": "git add * && git commit update && git push",
     "tsc": "tsc",
     "listen": "nodemon app.js",
     "start": "npm run tsc -- -w | npm run listen"
