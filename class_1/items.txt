@@ -1,0 +1,8 @@
+why typescript
+typescript playground
+vs code / alternatives
+instalation
+transpiler & options
+static typing
+running tsc locally
+express app (CRUD games)
