@@ -1,3 +1,24 @@
+class TesFirstExample {
+    static sharedProperty;
+    public publicProperty;
+    private privatepublicProperty;
+    protected protectedpublicProperty;
+    readonly readonlypublicProperty;
+    //abstract abstractProperty; //only on abstract classes
+
+    private static privateStaticpublicProperty;
+
+    constructor(/*this takes the parameters you send on "new TesFirstExample(<here>)"*/) {
+        console.log('hello'); //this gets executed on "new..."
+    }
+
+    //static
+    //private
+    //protected
+    //abstract //only on abstract classes
+    public method() { }
+}
+
 /* models */
 class Actor implements IActor {
     constructor(
