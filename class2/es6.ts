@@ -2,7 +2,7 @@
 function someFn(value: string = 'this is the default value') { }
 
 /* template literal */
-const template: string = `1 + 1 is: ${1 + 1}`;
+const template: string = `1 + 1 is: ${1 + 1}`; // '1 + 1 is: 2'
 
 /* multi line strings */
 const multiLine: string = `
@@ -11,8 +11,8 @@ line 2
 line 3`;
 
 /* destructuring assignment */
-const someObject: any = { first: 1, second: 2, third: 3 }
-const {first, third} = someObject;
+const someObject: { [key: string]: number } = { first: 1, second: 2, third: 3 }
+const { first, third } = someObject; // var first = someObject.first, third = someObject.third;
 
 /* object literals */
 const someId: number = 1;
@@ -37,9 +37,9 @@ class someClass {
 }
 
 /* function generators*/
-function* generate(){
+function* generate() {
     let counter: number = 0;
-    while(true) yield counter++;
+    while (true) yield counter++;
 }
 
 const counting = generate(); //undefined
@@ -47,3 +47,16 @@ counting.next(); // 0
 counting.next(); // 1
 counting.next(); // 2
 counting.next(); // 3
+
+/* rest parameters */
+function giveMeArgs(...args) {
+    args.forEach((arg: any, index: number) => {
+
+    });
+}
+
+/* for of */
+const exampleArray: string[] = ['apple', 'orange', 'banana'];
+for (let item of exampleArray) {
+    item; //"apple"...
+}
