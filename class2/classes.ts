@@ -30,10 +30,10 @@ const looper: IMovie = new Movie(1, 'Looper', [bruce, joseph]);
 const armageddon: IMovie = new Movie('abc', 'Armageddon', [bruce]);
 
 const rateResult: boolean = looper.rate(5);
-const commentId: number = looper.postComment('grate movie');
+const commentId: number = looper.postComment('great movie');
 
 /* getters & setters */
-class superSecureClass {
+class SuperSecureClass {
     private _uppercaseName: string = '';
 
     set isSecure(value: string) {
@@ -45,3 +45,7 @@ class superSecureClass {
         return `uppercase name is ${this._uppercaseName}`;
     }
 }
+
+const superSecureClassInstance = new SuperSecureClass();
+superSecureClassInstance.isSecure = 'hello';
+const whatsInThere = superSecureClassInstance.isSecure; // 'uppercase name is HELLO'
