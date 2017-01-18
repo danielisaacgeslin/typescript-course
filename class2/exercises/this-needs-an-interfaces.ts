@@ -1,4 +1,21 @@
-const vinylRecord_1 = {
+interface IArtist {
+    readonly id: number;
+    name: string;
+    nationality?: string;
+    age?: number;
+}
+
+interface IVynilRecord {
+    readonly id: number | string;
+    readonly creationTimestamp: Date;
+    name: string;
+    stock: number;
+    available: boolean;
+    artists: IArtist[];
+    rating?: number;
+}
+
+const vinylRecord_1: IVynilRecord = {
     id: 1,
     creationTimestamp: new Date(),
     name: 'some album',
@@ -9,7 +26,7 @@ const vinylRecord_1 = {
     ]
 };
 
-const vinylRecord_2 = {
+const vinylRecord_2: IVynilRecord = {
     id: 'a3s2d11q5w3dfgas1a3-4',
     creationTimestamp: new Date(),
     name: 'some other album',

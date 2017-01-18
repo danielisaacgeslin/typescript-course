@@ -10,3 +10,22 @@ interface IBook {
     open(page: number): page;
     close(fast?: boolean): void;
 }
+
+class Book implements IBook {
+    constructor(
+        readonly id: number | string,
+        public title: string,
+        public pages: number,
+        public topics: string[]
+    ) { }
+
+    public open(page: number): page {
+        return '';
+    }
+
+    public close(fast?: boolean) {
+
+    }
+}
+
+const testBook: IBook = new Book(1, '', 1, []);
