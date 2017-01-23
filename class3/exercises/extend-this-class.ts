@@ -7,7 +7,8 @@
 abstract class Pet {
     public name: string;
 
-    constructor() {
+    constructor(name) {
+        this.name = name;
         console.log(`don't forget to call this constructor`);
     }
 
@@ -18,4 +19,17 @@ abstract class Pet {
     public saySomething(): string {
         return `my name is ${this.name} and i say `;
     }
+}
+
+class Mouse extends Pet {
+    public sound: string;
+    constructor(name, sound) {
+        super(name);
+        this.sound = sound;
+    }
+
+    public saySomething() {
+        return `${super.saySomething()} ${this.sound}`;
+    }
+
 }

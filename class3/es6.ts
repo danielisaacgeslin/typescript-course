@@ -1,5 +1,5 @@
 /* default parameter */
-function someFn(value: string = 'this is the default value') { }
+function someFn(value: string = 'this is the default value') {}
 
 /* template literal */
 const template: string = `1 + 1 is: ${1 + 1}`; // '1 + 1 is: 2'
@@ -11,18 +11,18 @@ line 2
 line 3`;
 
 /* destructuring assignment */
-const someObject: { [key: string]: number } = { first: 1, second: 2, third: 3 }
+const someObject = { first: 1, second: 2, third: 3 }
 const { first, third } = someObject; // var first = someObject.first, third = someObject.third;
 
 /* object literals */
 const someId: number = 1;
 const someName: string = 'Dani';
-const someObj: { someId: number, someName: string } = { someId, someName };
+const someObj = { someId, someName };
 
 /* arrow functions */
 const arrow1 = () => { };
 const arrow2 = data => data ? data : 'nothing to return';
-const arrow3 = data => { };
+const arrow3 = data => {};
 
 /* promise */
 const promise = new Promise((resolve, reject) => { });
