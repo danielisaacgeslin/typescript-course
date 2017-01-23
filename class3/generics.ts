@@ -24,7 +24,7 @@ function returnsMistery<T>(param: T): T {
 const numberParam: number = 5;
 const whatAmI = returnsMistery(numberParam); //takes number as param and returns number
 
-/* generic on posible case */
+/* more generics */
 interface ICatList {
     catName: string;
     typeOfCat: string;
@@ -55,3 +55,12 @@ const dogPages: IPetPagination<IDogList> = {
     totalResults: 100,
     perPage: 20
 };
+
+/* on promises */
+
+const getDataFromDb = (): Promise<string[]> => new Promise(resolve => resolve(['first', 'second', 'third']));
+
+getDataFromDb().then(
+    data => data[0].toUpperCase, //data:string[] -> FIRST
+    error => { } // error: any
+)

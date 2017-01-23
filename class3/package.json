@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "test": "mocha",
     "tsc": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "typescript": "^2.1.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.38",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "ts-node": "^2.0.0"
   }
 }

@@ -1,7 +1,7 @@
 /**
  * create a new class as an extension of this one.
  * create a "sound" property as a string
- * Extend the "saySomething" so it also emits the sound of the new class pet sound.
+ * Extend the "saySomething" so it also returns the sound of the new class pet sound.
  */
 
 abstract class Pet {
