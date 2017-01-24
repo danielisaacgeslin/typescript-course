@@ -2,7 +2,7 @@
 {
     "explorer.openEditors.visible": 0,
     "files.exclude": {
-        "**/*.js": true,
+        "**/*.js": false,
         "**/*.js.map": true
     }
 }
