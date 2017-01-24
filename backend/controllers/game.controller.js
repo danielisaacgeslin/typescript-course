@@ -3,7 +3,7 @@ var GameController = (function () {
     function GameController() {
     }
     GameController.prototype.get = function (req, res, next) {
-        res.json({ get: true });
+        res.json({ list: [{ id: 1, name: 'Dark Souls 3' }, { id: 2, name: 'Battlefield One' }] });
         next();
     };
     GameController.prototype.post = function (req, res, next) {

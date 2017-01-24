@@ -6,7 +6,7 @@ export default class GameController {
     constructor() { }
 
     get(req: express.Request, res: express.Response, next: express.NextFunction) {
-        res.json({ get: true });
+        res.json({list: [{id:1, name: 'Dark Souls 3'}, {id:2, name: 'Battlefield One'}]});
         next();
     }
 
