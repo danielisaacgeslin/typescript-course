@@ -1,12 +1,23 @@
 import * as express from 'express';
 
+import { BaseController } from './base.controller';
 import Logger from '../services/logger';
 
-export default class GameController {
-    constructor() { }
+export default class GameController extends BaseController {
+    public tableName: string;
+
+    constructor() {
+        super();
+    }
 
     get(req: express.Request, res: express.Response, next: express.NextFunction) {
-        res.json({list: [{id:1, name: 'Dark Souls 3'}, {id:2, name: 'Battlefield One'}]});
+        res.json({
+            list: [
+                { id: 789, name: 'Dark Souls 3' },
+                { id: 123, name: 'Battlefield One' },
+                { id: 456, name: 'Final Fantasy XV' }
+            ]
+        });
         next();
     }
 

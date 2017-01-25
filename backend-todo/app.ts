@@ -2,7 +2,7 @@ import * as express from 'express';
 import { urlencoded, json } from 'body-parser';
 
 import { PORT } from './config/constants';
-import allowCrossDomain from './services/allowCrossDomain';
+import allowCrossDomain from './services/allowCrossDomain'; 
 import Logger from './services/logger';
 import GameController from './controllers/game.controller';
 

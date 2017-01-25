@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TableComponent implements OnInit {
   @Input() games: IGame[] = [];
+  @Input() deleteItem: (id: number) => void;
   constructor() { }
 
   ngOnInit() {

@@ -1,14 +1,18 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>ID</th>
       <th>Name</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let game of games">
+    <tr *ngFor="let game of games; let i = index">
+      <td>{{i + 1}}</td>
       <td>{{game.id}}</td>
       <td>{{game.name}}</td>
+      <td><button (click)="deleteItem(game.id)">delete</button></td>
     </tr>
   </tbody>
 </table>

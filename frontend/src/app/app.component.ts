@@ -7,8 +7,12 @@ import { GameService } from './game.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public someProp: string = 'i am some prop';
   public games: IGame[];
-  constructor(public gameService: GameService) { }
+  
+  constructor(public gameService: GameService) {
+    this.deleteGame = this.deleteGame.bind(this);
+  }
 
   ngOnInit() {
     this.getGames();
@@ -17,6 +21,10 @@ export class AppComponent {
   getGames() {
     this.gameService.getGames().subscribe(games => {
       this.games = games.list;
-    })
+    });
+  }
+
+  deleteGame(id: number) {
+    alert(`deleting ${id}, some prop says: ${this.someProp}`);
   }
 }
