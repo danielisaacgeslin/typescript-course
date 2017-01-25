@@ -10,3 +10,11 @@ interface ISomePerson {
 }
 
 let testMe: any;
+
+function isSomePersonTG(param: any): param is ISomePerson {
+    return true;
+}
+
+if (isSomePersonTG(testMe)) {
+    
+}
