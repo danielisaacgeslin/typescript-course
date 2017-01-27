@@ -4,7 +4,7 @@
 declare var System: any;
 
 interface IGame {
-    id: number;
+    id?: number;
     name: string;
 }
 

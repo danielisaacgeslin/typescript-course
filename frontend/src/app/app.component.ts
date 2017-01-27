@@ -7,9 +7,10 @@ import { GameService } from './game.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public someProp: string = 'i am some prop';
+  public title: string = 'games';
+  public newGameName: string;
   public games: IGame[];
-  
+
   constructor(public gameService: GameService) {
     this.deleteGame = this.deleteGame.bind(this);
   }
@@ -19,12 +20,26 @@ export class AppComponent {
   }
 
   getGames() {
-    this.gameService.getGames().subscribe(games => {
-      this.games = games.list;
+    this.gameService.getGames().subscribe(
+      games => this.games = games.list
+    );
+  }
+
+  createGame() {
+    const name: string = this.newGameName;
+
+    /* checks empty and used names */
+    if (!name || this.games.filter(game => game.name.toLowerCase() === name.toLowerCase()).length) return;
+
+    this.gameService.createGame({ name }).subscribe(data => {
+      this.games.push(Object.assign({}, data, { name }));
+      this.newGameName = null;
     });
   }
 
-  deleteGame(id: number) {
-    alert(`deleting ${id}, some prop says: ${this.someProp}`);
+  deleteGame(game: IGame) {
+    this.gameService.deleteGame(game).subscribe(
+      data => this.games = this.games.filter(storedGame => storedGame.id !== data.id)
+    );
   }
 }

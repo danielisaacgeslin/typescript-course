@@ -19,8 +19,8 @@ app.all('*', Logger.logRequest);
 /* game */
 app.get('/game', gameCtrl.get);
 app.post('/game', gameCtrl.post);
-app.put('/game', gameCtrl.put);
-app.delete('/game', gameCtrl.delete);
+app.put('/game/:id', gameCtrl.put);
+app.delete('/game/:id', gameCtrl.delete);
 
 
 app.listen(PORT, () => {

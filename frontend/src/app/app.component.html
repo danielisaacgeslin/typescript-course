@@ -1,4 +1,7 @@
-<h1>
-  {{title}}
-  <app-table [deleteItem]="deleteGame" [games]="games"></app-table>
-</h1>
+<h3>{{title}}</h3>
+<app-table [deleteItem]="deleteGame" [games]="games"></app-table>
+<div>
+  <h3>Create a new game</h3>
+  <input type="text" [(ngModel)]="newGameName" />
+  <button (click)="createGame()">Create</button>
+</div>
