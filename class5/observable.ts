@@ -2,6 +2,7 @@ function subscribe(observer) {
     let counter: number = 20;
     observer.next(1);
     observer.next(2);
+    observer.error(new Error('ups'));
     observer.next(3);
     const interval = setInterval(() => {
         observer.next(counter);
