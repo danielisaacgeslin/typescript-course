@@ -29,4 +29,17 @@ export class GameService {
     return this.http.delete(`${API}/game/${params.id}`)
       .map((response: Response) => response.json());
   }
+
+  customObservable(): Observable<number> {
+    return new Observable(observer => {
+      let counter: number = 20;
+      observer.next(1);
+      observer.next(5);
+      observer.next(10);
+      setInterval(() => {
+        observer.next(counter);
+        counter++;
+      }, 1000);
+    });
+  }
 }

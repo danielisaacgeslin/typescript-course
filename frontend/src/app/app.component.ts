@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 import { GameService } from './game.service';
 
 @Component({
@@ -10,6 +11,8 @@ export class AppComponent {
   public title: string = 'games';
   public newGameName: string;
   public games: IGame[];
+  public test: number[] = [];
+  public test2: number[] = [];
 
   constructor(public gameService: GameService) {
     this.deleteGame = this.deleteGame.bind(this);
@@ -17,6 +20,28 @@ export class AppComponent {
 
   ngOnInit() {
     this.getGames();
+    let subscription: Subscription;
+    let subscription2: Subscription;
+
+    /* test subscription */
+    subscription = this.gameService.customObservable().subscribe(
+      data => this.test.push(data)
+    );
+    /* test unsubscribe */
+    setTimeout(() => {
+      subscription.unsubscribe();
+    }, 10000);
+
+    /* test 2 subscription */
+    setTimeout(() => {
+      subscription2 = this.gameService.customObservable().subscribe(
+        data => this.test2.push(data)
+      );
+    }, 5000);
+    /* test 2 unsubscribe */
+    setTimeout(() => {
+      subscription2.unsubscribe();
+    }, 15000);
   }
 
   getGames() {
