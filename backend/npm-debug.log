@@ -2,21 +2,21 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Users\\dgeslin\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'start' ]
-2 info using npm@3.10.9
+2 info using npm@4.0.5
 3 info using node@v7.0.0
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle class4@1.0.0~prestart: class4@1.0.0
 6 silly lifecycle class4@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle class4@1.0.0~start: class4@1.0.0
 8 verbose lifecycle class4@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle class4@1.0.0~start: PATH: C:\Users\dgeslin\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\projects\typescript-course\backend\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Amazon\AWSCLI\;C:\Ruby23\bin;C:\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Users\dgeslin\AppData\Local\atom\bin;C:\Users\dgeslin\AppData\Roaming\npm;C:\Users\dgeslin\AppData\Local\Microsoft\WindowsApps;C:\Users\dgeslin\AppData\Local\Android\sdk\platform-tools;C:\Users\dgeslin\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin
+9 verbose lifecycle class4@1.0.0~start: PATH: C:\Users\dgeslin\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\projects\typescript-course\backend\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Symantec\VIP Access Client\;C:\Program Files\Amazon\AWSCLI\;C:\Program Files\Git\cmd;C:\Users\dgeslin\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Ruby23\bin;C:\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Java\jdk1.8.0_91;C:\Users\dgeslin\AppData\Local\atom\bin;C:\Users\dgeslin\AppData\Local\Android\sdk;C:\Users\dgeslin\AppData\Local\Android\sdk\platform-tools;C:\Users\dgeslin\AppData\Local\Microsoft\WindowsApps;C:\Users\dgeslin\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\dgeslin\AppData\Roaming\nvm;C:\Program Files\nodejs
 10 verbose lifecycle class4@1.0.0~start: CWD: C:\projects\typescript-course\backend
 11 silly lifecycle class4@1.0.0~start: Args: [ '/d /s /c', 'npm run tsc -- -w | npm run listen' ]
 12 silly lifecycle class4@1.0.0~start: Returned: code: 3221225786  signal: null
 13 info lifecycle class4@1.0.0~start: Failed to exec start script
 14 verbose stack Error: class4@1.0.0 start: `npm run tsc -- -w | npm run listen`
 14 verbose stack Exit status 3221225786
-14 verbose stack     at EventEmitter.<anonymous> (C:\Users\dgeslin\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\dgeslin\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
 14 verbose stack     at ChildProcess.<anonymous> (C:\Users\dgeslin\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
@@ -29,7 +29,7 @@
 17 error Windows_NT 10.0.14393
 18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\dgeslin\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
 19 error node v7.0.0
-20 error npm  v3.10.9
+20 error npm  v4.0.5
 21 error code ELIFECYCLE
 22 error class4@1.0.0 start: `npm run tsc -- -w | npm run listen`
 22 error Exit status 3221225786
